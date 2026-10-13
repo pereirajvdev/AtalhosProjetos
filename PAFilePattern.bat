@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\Joao Castro\Documents\PAFilePattern"
+cd /d "%USERPROFILE%\Documents\PAFilePattern"
 call .venv\Scripts\activate
 
 powershell -NoProfile -Command "$ws = New-Object -ComObject WScript.Shell; $ws.AppActivate((Get-Process -Id $PID).Parent.Id); Start-Sleep -Milliseconds 300; $ws.SendKeys('python src\main.py')"
